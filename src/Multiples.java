@@ -1,24 +1,29 @@
 public class Multiples {
-    public static void main(String[] args) {
-        int i = 0;
+    public static int main (int targnum, int a, int b) {
+        int i = 1;
         int count = 0;
-        while (i <= 1000) {
+        count = getCount(targnum, a, b, i, count);
+        return count;
+    }
 
-            boolean divisibleBy3 = i % 3 == 0;
-            boolean divisibleBy5 = i % 5 == 0;
+    private static int getCount(int targnum, int a, int b, int i, int count) {
+        while (i < targnum) {
 
-            if (divisibleBy3 && divisibleBy5) {
+            boolean divisibleBya = i % a == 0;
+            boolean divisibleByb = i % b == 0;
+
+            if (divisibleBya && divisibleByb) {
 
                 i++;
                 count++;
 
-            } else if (divisibleBy3) {
+            } else if (divisibleBya) {
 
                 i++;
                 count++;
 
 
-            } else if (divisibleBy5) {
+            } else if (divisibleByb) {
 
                 i++;
                 count++;
@@ -27,6 +32,6 @@ public class Multiples {
                 i++;
             }
         }
-        System.out.printf(String.valueOf(count));
+        return count;
     }
 }

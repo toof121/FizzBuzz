@@ -1,7 +1,6 @@
 public class Reduce {
-    public static void main(String[] args) {
+    public static int main(int num) {
         int count = 0;
-        int num = 100;
         while(num != 0) {
             if (num % 2 == 0) {
                 num = num / 2;
@@ -11,6 +10,6 @@ public class Reduce {
                 count++;
             }
         }
-        System.out.printf(String.valueOf(count));
+        return count;
     }
 }
