@@ -1,5 +1,10 @@
 public class Multiples {
-    public static int main (int targnum, int a, int b) {
+    public static int main() {
+        // Call the overloaded main method with default values
+        return main(1000, 3, 5);
+    }
+
+    public static int main(int targnum, int a, int b) {
         int i = 1;
         int count = 0;
         count = getCount(targnum, a, b, i, count);
